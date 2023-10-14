@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Source+Sans+3&display=swap');
+
+
+body {
+  background-color: #111111;
+  color: white;
+  padding: 2rem;
+}
+
+.title {
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: "Rubik", sans-serif;
+  font-weight: normal;
+  color: #EAEAEA;
+  margin: 0;
+  margin-top: .5rem;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.hero > .title {
+  font-size: 1.75rem;
+}
+
+section > p:first-of-type::first-letter {
+  margin-left: 1rem;
+}
+
+p {
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.3rem;
+}
+
+.box {
+  font-family: "Work Sans", sans-serif;
+}
+
+nav {
+  z-index: 1;
+  position: fixed;
+  display: block;
+  padding: .5rem;
+  border: 1px solid #F7F7F7;
+  border-radius: 9px;
+  width: 25px;
+  height: 20px;
+  text-align: center;
+  vertical-align: center;
+  transition: background-color .2s;
+}
+
+nav:hover, nav:focus {
+  background-color: #F7F7F7;
+}
+
+nav:hover > .subtitle, nav:focus > .subtitle {
+  color: #111111;
+}
+
+nav > .subtitle {
+  margin: 0;
+  font-family: monospace;
+  font-weight: bolder;
+}
