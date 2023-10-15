@@ -7,11 +7,23 @@
   <title>vraja</title>
   <link rel="stylesheet" href="vraja.css">
 </head>
-<body>
+<body class="main">
   
-  <nav>
+  <nav onclick="nav()">
     <h3 class="subtitle">::</h3>
   </nav>
+  
+  <section id="nav-menu">
+    <div class="main">
+      <nav onclick="nav()">
+        <h3 class="subtitle">::</h3>
+      </nav>
+      <ul class="tabs">
+       <a href="index.html" class="active"><li>Home</li></a>
+        <a href="dictionary.html"><li>Dictionary</li></a>
+      </ul>
+    </div>
+  </section>
   
   <section class="hero">
     <h1 class="title">vraja</h1>
@@ -28,5 +40,6 @@
     </p>
   </section>
   
+  <script src="main.js"></script>
 </body>
 </html>
