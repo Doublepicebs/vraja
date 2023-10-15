@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&family=Source+Sans+3&display=swap');
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Source Sans 3", sans-serif;
@@ -41,10 +44,6 @@ p {
   line-height: 1.3rem;
 }
 
-.box {
-  font-family: "Source Sans 3", sans-serif;
-}
-
 nav {
   z-index: 1;
   position: fixed;
@@ -52,8 +51,8 @@ nav {
   padding: .5rem;
   border: 1px solid #F7F7F7;
   border-radius: 9px;
-  width: 25px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   text-align: center;
   vertical-align: center;
   transition: background-color .2s;
@@ -122,4 +121,22 @@ nav > .subtitle {
   background-color: rgba(247, 247, 247, 0.8);
   backdrop-filter: blur(2px);
   color: #111111;
+}
+
+#search-bar {
+  border: 1px solid #F7F7F7;
+  border-right-width: 3px;
+  border-bottom-width: 3px;
+  border-radius: 999px;
+  font: inherit;
+  background-color: transparent;
+  padding: 1rem;
+  width: 100%;
+  outline: none;
+  color: inherit;
+  transition: border-width .25s;
+}
+
+#search-bar:focus {
+  border-width: 1px;
 }
