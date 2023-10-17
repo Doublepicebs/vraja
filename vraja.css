@@ -45,6 +45,7 @@ p {
 }
 
 nav {
+  background-color: #111111;
   z-index: 1;
   position: fixed;
   display: block;
@@ -110,7 +111,7 @@ nav > .subtitle {
   display: block;
   color: #F7F7F7;
   padding: 1rem;
-  border-radius: 999px;
+  border-radius: 20px;
   text-decoration: none;
   list-style-type: none;
   text-align: center;
@@ -118,25 +119,74 @@ nav > .subtitle {
 }
 
 .tabs .active {
-  background-color: rgba(247, 247, 247, 0.8);
-  backdrop-filter: blur(2px);
+  background-color: #F7F7F7;
   color: #111111;
 }
 
 #search-bar {
   border: 1px solid #F7F7F7;
-  border-right-width: 3px;
-  border-bottom-width: 3px;
-  border-radius: 999px;
+  border-radius: 20px;
   font: inherit;
   background-color: transparent;
   padding: 1rem;
-  width: 100%;
+  width: 70%;
   outline: none;
   color: inherit;
   transition: border-width .25s;
+  display: inline-block;
+  margin-right: .5rem;
+}
+
+button {
+  padding: 1rem;
+  border: 1px solid #F7F7F7;
+  border-radius: 20px;
+  background-color: transparent;
+  color: inherit;
+  font: inherit;
+  transition: background-color .25s, color .25s;
+}
+
+button:focus {
+  background-color: #F7F7F7;
+  color: #111111;
 }
 
 #search-bar:focus {
   border-width: 1px;
+}
+
+#card-box {
+  margin-top: 3rem;
+}
+
+.card {
+  border: 1px solid #F7F7F7;
+  border-left: 10px solid #94DBC8;
+  border-radius: 20px;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.card > .word {
+  margin: 0;
+  font-family: "Rubik", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.root {
+  border-left: 10px solid #94C3FF
+}
+
+.patterns {
+  list-style: none;
+  margin: 0;
+}
+
+.pattern {
+  
+}
+
+.ghost {
+  margin-left: 1rem;
+  color: #CBCBCB;
 }
