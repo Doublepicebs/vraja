@@ -48,7 +48,8 @@ function card(obj) {
   card.classList.add("card");
   if (obj["root"][0] == "&") {
     card.classList.add("not-root");
-    card.innerHTML = `<h2 class="word">${obj["root"].substring(2)}</h2>
+    card.innerHTML = `
+    <h2 class="word">${obj["root"].substring(2)}</h2>
     <p>${obj["note"]}</p>`
   } else {
     card.innerHTML = `

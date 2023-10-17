@@ -7,43 +7,53 @@
   <title>vraja</title>
   <link rel="stylesheet" href="vraja.css">
 </head>
-<body class="main">
-  
-  <nav onclick="nav()">
-    <h3 class="subtitle"></h3>
-  </nav>
-  
+
+<body>
+
   <section id="nav-menu">
     <div class="main">
       <nav onclick="nav()">
         <h3 class="subtitle"></h3>
       </nav>
       <ul class="tabs">
-       <a href="index.html"><li>Home</li></a>
-        <a class="active" href="dictionary.html"><li>Dictionary</li></a>
+        <a href="index.html">
+          <li>Home</li>
+        </a>
+        <a href="dictionary.html" class="active">
+          <li>Dictionary</li>
+        </a>
       </ul>
     </div>
   </section>
-  
-  <section class="hero">
-    <h1 class="title">Dictionary</h1>
-  </section>
-  
-  <section>
-    
-    <div>
-      <input id="search-bar" placeholder="Search for a word or a root">
-      <button onclick="search()">search</button>
-    </div>
-    
-  </section>
-  
-  <section id="card-box">
-    
-  </section>
-  
+
+  <div class="main">
+
+    <nav onclick="nav()">
+      <h3 class="subtitle"></h3>
+    </nav>
+
+    <section class="hero">
+      <h1 class="title">Dictionary</h1>
+    </section>
+
+    <section>
+
+      <div>
+        <input id="search-bar" placeholder="Search for a word or a root">
+        <button onclick="search()">search</button>
+      </div>
+
+    </section>
+
+    <section id="card-box">
+
+    </section>
+
+  </div>
+
   <script src="main.js"></script>
   <script type="text/javascript" src="cdn_modules/PapaParse@5.4.1/papaparse.min.js"></script>
   <script src="dict.js"></script>
 </body>
+
 </html>

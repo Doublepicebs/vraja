@@ -9,6 +9,9 @@ body {
   background-color: #111111;
   color: white;
   margin: 0;
+}
+
+.main {
   padding: 2rem;
 }
 
@@ -74,20 +77,16 @@ nav > .subtitle {
 }
 
 #nav-menu {
+  margin: 0;
+  padding: 0;
   display: block;
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
   z-index: 2;
-}
-
-.main {
-  padding: 2rem;
 }
 
 #nav-menu.active {
@@ -162,10 +161,11 @@ button:focus {
 
 .card {
   border: 1px solid #F7F7F7;
-  border-left: 10px solid #94DBC8;
   border-radius: 20px;
+  border-top-left-radius: 0;
   margin-top: 2rem;
   padding: 1rem;
+  position: relative;
 }
 
 .card > .word {
@@ -173,8 +173,19 @@ button:focus {
   font-family: "Rubik", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.not-root {
-  border-left: 10px solid #94C3FF;
+.card:before {
+  content: "";
+  background-color: #94DBC8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-bottom-right-radius: 20px;
+}
+
+.card.not-root:before {
+  background-color: #94B3DB;
 }
 
 .patterns {
