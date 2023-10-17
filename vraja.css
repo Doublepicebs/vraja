@@ -173,12 +173,12 @@ button:focus {
   font-family: "Rubik", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.root {
-  border-left: 10px solid #94C3FF
+.not-root {
+  border-left: 10px solid #94C3FF;
 }
 
 .patterns {
-  list-style: none;
+  list-style: square;
   margin: 0;
 }
 
@@ -189,4 +189,5 @@ button:focus {
 .ghost {
   margin-left: 1rem;
   color: #CBCBCB;
+  float: right;
 }

@@ -1,11 +1,20 @@
-fetch("dict.csv")
-.then((res) => res.text())
-.then((text) => setData(text));
+let data = "";
+let proper = "";
 
-let data;
+fetch("proper.csv")
+  .then((res) => res.text())
+  .then((text) => proper = text);
+
+fetch("dict.csv")
+  .then((res) => res.text())
+  .then((text) => setData(text));
+
+
 function setData(text) {
   text = text.replaceAll(", ", ",");
-  data = Papa.parse(text, {"header": true})["data"];
+  proper = proper.replaceAll(", ", ",");
+  data = Papa.parse(text, { "header": true })["data"];
+  data = data.concat(Papa.parse(proper, { "header": true })["data"]);
 }
 
 const cardBox = document.getElementById("card-box");
@@ -26,7 +35,7 @@ function search() {
 
 function createCards(list, query) {
   if (list.length > 0) {
-      list.forEach(obj => {
+    list.forEach(obj => {
       card(obj);
     })
   } else {
@@ -37,7 +46,12 @@ function createCards(list, query) {
 function card(obj) {
   let card = document.createElement("div");
   card.classList.add("card");
-  card.innerHTML = `
+  if (obj["root"][0] == "&") {
+    card.classList.add("not-root");
+    card.innerHTML = `<h2 class="word">${obj["root"].substring(2)}</h2>
+    <p>${obj["note"]}</p>`
+  } else {
+    card.innerHTML = `
   <h2 class="word">${obj["root"]}</h2>
   <ul class="patterns">
     <li><span class="pattern">${obj["p1"]}</span><span class="ghost">n</span></li>
@@ -47,5 +61,6 @@ function card(obj) {
     <li><span class="pattern">${obj["p5"]}</span><span class="ghost">n</span></li>
     <li><span class="pattern">${obj["p6"]}</span><span class="ghost">n</span></li>
   </ul>`;
+  }
   cardBox.appendChild(card);
 }
