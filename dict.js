@@ -53,15 +53,27 @@ function card(obj) {
     <p>${obj["note"]}</p>`
   } else {
     card.innerHTML = `
-  <h2 class="word">${obj["root"]}</h2>
-  <ul class="patterns">
-    <li><span class="pattern">${obj["p1"]}</span><span class="ghost">n</span></li>
-    <li><span class="pattern">${obj["p2"]}</span><span class="ghost">adj</span></li>
-    <li><span class="pattern">${obj["p3"]}</span><span class="ghost">v</span></li>
-    <li><span class="pattern">${obj["p4"]}</span><span class="ghost">gerund</span></li>
-    <li><span class="pattern">${obj["p5"]}</span><span class="ghost">n</span></li>
-    <li><span class="pattern">${obj["p6"]}</span><span class="ghost">n</span></li>
-  </ul>`;
+      <h2 class="word">${obj["root"]}</h2>
+      <ul class="patterns">`;
+    if (obj.p1) {
+      card.innerHTML += ` <li><span class="pattern">${obj["p1"]}</span><span class="ghost">n</span></li>`
+    }
+    if (obj.p2) {
+      card.innerHTML += ` <li><span class="pattern">${obj["p2"]}</span><span class="ghost">adj</span></li>`;
+    }
+    if (obj.p3) {
+      card.innerHTML += `<li><span class="pattern">${obj["p3"]}</span><span class="ghost">v</span></li>`;
+    }
+    if (obj.p4) {
+      card.innerHTML += `<li><span class="pattern">${obj["p4"]}</span><span class="ghost">gerund</span></li>`;
+    }
+    if (obj.p5) {
+      card.innerHTML += `<li><span class="pattern">${obj["p5"]}</span><span class="ghost">n</span></li>`;
+    }
+    if (obj.p6) {
+      card.innerHTML += `<li><span class="pattern">${obj["p6"]}</span><span class="ghost">n</span></li>`;
+    }
+    card.innerHTML += `</ul>`;
   }
   cardBox.appendChild(card);
 }

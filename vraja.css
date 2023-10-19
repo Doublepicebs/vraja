@@ -29,6 +29,11 @@ body {
   margin-top: .5rem;
 }
 
+a {
+  color: #67BAFF;
+  text-decoration-color: #2A82CC;
+}
+
 .hero {
   text-align: center;
   margin-bottom: 100px;
@@ -48,7 +53,9 @@ p {
 }
 
 nav {
-  background-color: #111111;
+  margin-left: -5px;
+  background-color: rgba(17, 17, 17, .5);
+  backdrop-filter: blur(5px);
   z-index: 1;
   position: fixed;
   display: block;
@@ -63,7 +70,7 @@ nav {
 }
 
 nav:hover, nav:focus {
-  background-color: #F7F7F7;
+  background-color: #2F2F2F;
 }
 
 nav:hover > .subtitle, nav:focus > .subtitle {
@@ -134,11 +141,13 @@ nav > .subtitle {
   transition: border-width .25s;
   display: inline-block;
   margin-right: .5rem;
+  position: sticky;
+  top: 1;
 }
 
 button {
   padding: 1rem;
-  border: 1px solid #F7F7F7;
+  border: none;
   border-radius: 20px;
   background-color: transparent;
   color: inherit;
@@ -147,8 +156,7 @@ button {
 }
 
 button:focus {
-  background-color: #F7F7F7;
-  color: #111111;
+  background-color: #2F2F2F;
 }
 
 #search-bar:focus {
@@ -166,6 +174,7 @@ button:focus {
   margin-top: 2rem;
   padding: 1rem;
   position: relative;
+  text-transform: lowercase;
 }
 
 .card > .word {
